@@ -1,0 +1,25 @@
+<h2> 
+	<?php 
+		echo $gallery[0]['name']
+	?>
+</h2> 
+<h3>
+	<?php 
+		echo $gallery[0]['description']
+	?>
+</h3> 
+<?php 
+	foreach($images as $i): 
+?> 
+	<a href="/images/<?php echo $i['gallery_id'];?>/<?php echo $i['filename'];?>" target="_blank"> 
+		<img src="/images/<?php echo $i['gallery_id'];?>/<?php echo $i['filename'];?>200.png"> 
+	</a> 
+<?php 
+	endforeach;
+?> 
+<p>
+	<a href="/">
+		Voltar
+	</a>
+</p> 
+//http://eltonminetto.net/blog/2011/11/29/slim-framework/

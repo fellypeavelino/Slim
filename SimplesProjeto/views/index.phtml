@@ -1,0 +1,24 @@
+<h2>
+	Galerias
+</h2> 
+<div id="gallery"> 
+	<?php 
+		if(isset($data)): 
+	?> 
+		<?php 
+			foreach($data as $d): 
+		?> 
+		<p>
+			<a href="/gallery/<?php echo $d['id'];?>">
+				<?php 
+					echo $d['name'];
+				?>
+			</a>
+		</p> 
+		<?php 
+			endforeach;
+		?> 
+	<?php 
+	endif;
+	?> 
+</div> 
